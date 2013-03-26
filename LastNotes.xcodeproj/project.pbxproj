@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C0F09EB1702680A00B25592 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0F09EA1702680A00B25592 /* UIKit.framework */; };
+		2C0F09ED1702680A00B25592 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0F09EC1702680A00B25592 /* Foundation.framework */; };
+		2C0F09EF1702680A00B25592 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0F09EE1702680A00B25592 /* CoreGraphics.framework */; };
+		2C0F09F11702680A00B25592 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0F09F01702680A00B25592 /* CoreData.framework */; };
+		2C0F09F71702680A00B25592 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F09F51702680A00B25592 /* InfoPlist.strings */; };
+		2C0F09F91702680A00B25592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F09F81702680A00B25592 /* main.m */; };
+		2C0F09FD1702680A00B25592 /* OTLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F09FC1702680A00B25592 /* OTLAppDelegate.m */; };
+		2C0F09FF1702680A00B25592 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F09FE1702680A00B25592 /* Default.png */; };
+		2C0F0A011702680A00B25592 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F0A001702680A00B25592 /* Default@2x.png */; };
+		2C0F0A031702680A00B25592 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F0A021702680A00B25592 /* Default-568h@2x.png */; };
+		2C0F0A061702680A00B25592 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F0A041702680A00B25592 /* MainStoryboard.storyboard */; };
+		2C0F0A091702680A00B25592 /* LastNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A071702680A00B25592 /* LastNotes.xcdatamodeld */; };
+		2C0F0A0C1702680A00B25592 /* OTLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A0B1702680A00B25592 /* OTLMasterViewController.m */; };
+		2C0F0A0F1702680A00B25592 /* OTLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A0E1702680A00B25592 /* OTLDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C0F09E71702680A00B25592 /* LastNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0F09EA1702680A00B25592 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2C0F09EC1702680A00B25592 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C0F09EE1702680A00B25592 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C0F09F01702680A00B25592 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2C0F09F41702680A00B25592 /* LastNotes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LastNotes-Info.plist"; sourceTree = "<group>"; };
+		2C0F09F61702680A00B25592 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C0F09F81702680A00B25592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C0F09FA1702680A00B25592 /* LastNotes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LastNotes-Prefix.pch"; sourceTree = "<group>"; };
+		2C0F09FB1702680A00B25592 /* OTLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTLAppDelegate.h; sourceTree = "<group>"; };
+		2C0F09FC1702680A00B25592 /* OTLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLAppDelegate.m; sourceTree = "<group>"; };
+		2C0F09FE1702680A00B25592 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2C0F0A001702680A00B25592 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2C0F0A021702680A00B25592 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2C0F0A051702680A00B25592 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2C0F0A081702680A00B25592 /* LastNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LastNotes.xcdatamodel; sourceTree = "<group>"; };
+		2C0F0A0A1702680A00B25592 /* OTLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTLMasterViewController.h; sourceTree = "<group>"; };
+		2C0F0A0B1702680A00B25592 /* OTLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLMasterViewController.m; sourceTree = "<group>"; };
+		2C0F0A0D1702680A00B25592 /* OTLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTLDetailViewController.h; sourceTree = "<group>"; };
+		2C0F0A0E1702680A00B25592 /* OTLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C0F09E41702680A00B25592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0F09EB1702680A00B25592 /* UIKit.framework in Frameworks */,
+				2C0F09ED1702680A00B25592 /* Foundation.framework in Frameworks */,
+				2C0F09EF1702680A00B25592 /* CoreGraphics.framework in Frameworks */,
+				2C0F09F11702680A00B25592 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C0F09DE1702680A00B25592 = {
+			isa = PBXGroup;
+			children = (
+				2C0F09F21702680A00B25592 /* LastNotes */,
+				2C0F09E91702680A00B25592 /* Frameworks */,
+				2C0F09E81702680A00B25592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C0F09E81702680A00B25592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C0F09E71702680A00B25592 /* LastNotes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C0F09E91702680A00B25592 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C0F09EA1702680A00B25592 /* UIKit.framework */,
+				2C0F09EC1702680A00B25592 /* Foundation.framework */,
+				2C0F09EE1702680A00B25592 /* CoreGraphics.framework */,
+				2C0F09F01702680A00B25592 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C0F09F21702680A00B25592 /* LastNotes */ = {
+			isa = PBXGroup;
+			children = (
+				2C0F09FB1702680A00B25592 /* OTLAppDelegate.h */,
+				2C0F09FC1702680A00B25592 /* OTLAppDelegate.m */,
+				2C0F0A041702680A00B25592 /* MainStoryboard.storyboard */,
+				2C0F0A0A1702680A00B25592 /* OTLMasterViewController.h */,
+				2C0F0A0B1702680A00B25592 /* OTLMasterViewController.m */,
+				2C0F0A0D1702680A00B25592 /* OTLDetailViewController.h */,
+				2C0F0A0E1702680A00B25592 /* OTLDetailViewController.m */,
+				2C0F0A071702680A00B25592 /* LastNotes.xcdatamodeld */,
+				2C0F09F31702680A00B25592 /* Supporting Files */,
+			);
+			path = LastNotes;
+			sourceTree = "<group>";
+		};
+		2C0F09F31702680A00B25592 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C0F09F41702680A00B25592 /* LastNotes-Info.plist */,
+				2C0F09F51702680A00B25592 /* InfoPlist.strings */,
+				2C0F09F81702680A00B25592 /* main.m */,
+				2C0F09FA1702680A00B25592 /* LastNotes-Prefix.pch */,
+				2C0F09FE1702680A00B25592 /* Default.png */,
+				2C0F0A001702680A00B25592 /* Default@2x.png */,
+				2C0F0A021702680A00B25592 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C0F09E61702680A00B25592 /* LastNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C0F0A121702680A00B25592 /* Build configuration list for PBXNativeTarget "LastNotes" */;
+			buildPhases = (
+				2C0F09E31702680A00B25592 /* Sources */,
+				2C0F09E41702680A00B25592 /* Frameworks */,
+				2C0F09E51702680A00B25592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LastNotes;
+			productName = LastNotes;
+			productReference = 2C0F09E71702680A00B25592 /* LastNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C0F09DF1702680A00B25592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OTL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Othmane Laousy";
+			};
+			buildConfigurationList = 2C0F09E21702680A00B25592 /* Build configuration list for PBXProject "LastNotes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C0F09DE1702680A00B25592;
+			productRefGroup = 2C0F09E81702680A00B25592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C0F09E61702680A00B25592 /* LastNotes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C0F09E51702680A00B25592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0F09F71702680A00B25592 /* InfoPlist.strings in Resources */,
+				2C0F09FF1702680A00B25592 /* Default.png in Resources */,
+				2C0F0A011702680A00B25592 /* Default@2x.png in Resources */,
+				2C0F0A031702680A00B25592 /* Default-568h@2x.png in Resources */,
+				2C0F0A061702680A00B25592 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C0F09E31702680A00B25592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0F09F91702680A00B25592 /* main.m in Sources */,
+				2C0F09FD1702680A00B25592 /* OTLAppDelegate.m in Sources */,
+				2C0F0A091702680A00B25592 /* LastNotes.xcdatamodeld in Sources */,
+				2C0F0A0C1702680A00B25592 /* OTLMasterViewController.m in Sources */,
+				2C0F0A0F1702680A00B25592 /* OTLDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C0F09F51702680A00B25592 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C0F09F61702680A00B25592 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2C0F0A041702680A00B25592 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C0F0A051702680A00B25592 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C0F0A101702680A00B25592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C0F0A111702680A00B25592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C0F0A131702680A00B25592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LastNotes/LastNotes-Prefix.pch";
+				INFOPLIST_FILE = "LastNotes/LastNotes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2C0F0A141702680A00B25592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LastNotes/LastNotes-Prefix.pch";
+				INFOPLIST_FILE = "LastNotes/LastNotes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C0F09E21702680A00B25592 /* Build configuration list for PBXProject "LastNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0F0A101702680A00B25592 /* Debug */,
+				2C0F0A111702680A00B25592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C0F0A121702680A00B25592 /* Build configuration list for PBXNativeTarget "LastNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0F0A131702680A00B25592 /* Debug */,
+				2C0F0A141702680A00B25592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C0F0A071702680A00B25592 /* LastNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C0F0A081702680A00B25592 /* LastNotes.xcdatamodel */,
+			);
+			currentVersion = 2C0F0A081702680A00B25592 /* LastNotes.xcdatamodel */;
+			path = LastNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C0F09DF1702680A00B25592 /* Project object */;
+}
