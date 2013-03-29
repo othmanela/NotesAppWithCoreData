@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Othmane Laousy. All rights reserved.
 //
 
+
 #import "OTLAddNoteViewController.h"
 
 @interface OTLAddNoteViewController ()
@@ -33,6 +34,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)cancelModalViewController:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)doneWithModalViewController:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end

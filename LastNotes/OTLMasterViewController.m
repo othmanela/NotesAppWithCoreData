@@ -9,6 +9,7 @@
 #import "OTLMasterViewController.h"
 
 #import "OTLDetailViewController.h"
+#import "OTLAddNoteViewController.h"
 
 @interface OTLMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -39,22 +40,7 @@
 
 - (void)insertNewObject:(id)sender
 {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-         // Replace this implementation with code to handle the error appropriately.
-         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    [self performSegueWithIdentifier:@"AddNote" sender:self];
 }
 
 #pragma mark - Table View
@@ -91,13 +77,56 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }   
 }
+
+// This method gets called when the save button is pressed
+-(IBAction)foo:(UIStoryboardSegue *)segue
+{
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    OTLAddNoteViewController *sourceView= segue.sourceViewController;
+    // If appropriate, configure the new managed object.
+    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:sourceView.titleField.text forKey:@"title"];
+    [newManagedObject setValue:sourceView.contentField.text forKey:@"content"];
+    //Location setup
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy= kCLLocationAccuracyHundredMeters;
+    self.locationManager.distanceFilter= 1000.0f;
+    [self.locationManager startUpdatingLocation];
+   
+    double lati= _locationManager.location.coordinate.latitude;
+    [newManagedObject setValue:[NSNumber numberWithDouble:lati] forKey:@"lat"];
+    double longi= _locationManager.location.coordinate.longitude;
+    [newManagedObject setValue:[NSNumber numberWithDouble:longi] forKey:@"lon"];
+    [self.locationManager stopUpdatingLocation];
+    if(![CLLocationManager locationServicesEnabled]){
+        NSString *msg = @"Application cannot obtain location. Please go to Settings> Privacy> Location and enable location for this application";
+        UIAlertView *alert;
+        alert = [[UIAlertView alloc]
+                 initWithTitle:@"Error"
+                 message:msg
+                 delegate:self
+                 cancelButtonTitle:@"OK"
+                 otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -216,7 +245,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"title"] description];
 }
 
 @end

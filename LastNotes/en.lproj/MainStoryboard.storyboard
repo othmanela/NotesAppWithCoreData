@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2524" systemVersion="12A217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1863"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,12 +19,12 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--class Prefix:identifier Master View Controller - Master-->
+        <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="OTLMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -35,12 +35,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" lineBreakMode="tailTruncation" autoshrinkMode="none" baselineAdjustment="alignBaselines" text="Title" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -57,44 +57,227 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <navigationItem key="navigationItem" title="Your Notes" id="36"/>
+                    <connections>
+                        <segue destination="Smn-BI-DZJ" kind="modal" identifier="AddNote" id="S5f-dG-Rz5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--class Prefix:identifier Detail View Controller - Detail-->
+        <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
                 <viewController storyboardIdentifier="" title="Detail" id="21" customClass="OTLDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" lineBreakMode="tailTruncation" autoshrinkMode="none" minimumFontSize="10" text="Detail view content goes here" textAlignment="center" id="27">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Title" translatesAutoresizingMaskIntoConstraints="NO" id="II0-tQ-F6F">
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="F99-bj-9Ox"/>
+                                    <constraint firstAttribute="height" constant="34" id="JGQ-cL-qo4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="bBC-Ao-eOZ">
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="Fq9-FV-EyQ"/>
+                                    <constraint firstAttribute="width" constant="260" id="YM9-05-KqY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-4S-JOv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="peo-bk-ZDJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-cK-BG8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wWX-x2-OzF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sDJ-fT-Dph">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="6zS-3A-M01"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="21" id="1Yr-iv-q7R"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This note was taken here:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ui-6Y-fy0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="FnM-ck-Bfk"/>
+                                    <constraint firstAttribute="height" constant="21" id="H0e-sc-LzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="7cE-gL-0wv"/>
+                            <constraint firstItem="bBC-Ao-eOZ" firstAttribute="centerX" secondItem="27" secondAttribute="centerX" type="default" id="1lq-oN-Nde"/>
+                            <constraint firstAttribute="bottom" secondItem="sDJ-fT-Dph" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="4fk-NK-zn6"/>
+                            <constraint firstItem="HhG-cK-BG8" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CKu-RV-6uU"/>
+                            <constraint firstItem="7ui-6Y-fy0" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FAO-wU-Vgh"/>
+                            <constraint firstItem="sDJ-fT-Dph" firstAttribute="top" secondItem="7ui-6Y-fy0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IDZ-GJ-GRN"/>
+                            <constraint firstItem="sDJ-fT-Dph" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OnX-lE-Yis"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
+                            <constraint firstAttribute="trailing" secondItem="sDJ-fT-Dph" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SMZ-ZF-212"/>
+                            <constraint firstItem="HhG-cK-BG8" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Twa-Ww-pdb"/>
+                            <constraint firstAttribute="trailing" secondItem="II0-tQ-F6F" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Uwv-4Z-hfi"/>
+                            <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Vvh-i1-13v"/>
+                            <constraint firstItem="bBC-Ao-eOZ" firstAttribute="top" secondItem="HhG-cK-BG8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="b8V-Cc-uuO"/>
+                            <constraint firstItem="7hp-4S-JOv" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eFW-x4-s10"/>
+                            <constraint firstItem="HhG-cK-BG8" firstAttribute="trailing" secondItem="7hp-4S-JOv" secondAttribute="trailing" type="default" id="mRh-vS-pQ9"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstItem="II0-tQ-F6F" firstAttribute="top" secondItem="22" secondAttribute="top" constant="40" id="wCp-bC-4LL"/>
+                            <constraint firstItem="7hp-4S-JOv" firstAttribute="baseline" secondItem="27" secondAttribute="baseline" type="default" id="xyv-Mu-uvc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Note Detail" id="26"/>
                     <connections>
+                        <outlet property="detailContent" destination="bBC-Ao-eOZ" id="Fb4-Mk-GOh"/>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="detailTitle" destination="II0-tQ-F6F" id="uQg-Hu-qsI"/>
+                        <outlet property="mapView" destination="sDJ-fT-Dph" id="gfK-wC-19f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="995" y="-242"/>
+        </scene>
+        <!--Add Note View Controller-->
+        <scene sceneID="7OK-Hs-Ut3">
+            <objects>
+                <viewController id="Smn-BI-DZJ" customClass="OTLAddNoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bq-ZA-uLs">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vq1-f8-tkQ">
+                                <items>
+                                    <navigationItem title="New Note" id="hqb-hL-Bpd">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="v6U-0H-L3t">
+                                            <color key="tintColor" red="0.65194038720000003" green="0.0" blue="0.053667901550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="cancelModalViewController:" destination="Smn-BI-DZJ" id="mJK-u1-fDR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="hdn-XO-nvj">
+                                            <color key="tintColor" red="0.099169561810000001" green="0.1316732638" blue="0.81069548229999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="doneWithModalViewController:" destination="Smn-BI-DZJ" id="7Cu-kk-ALe"/>
+                                                <segue destination="df5-UW-IQC" kind="unwind" unwindAction="foo:" id="Wd9-i3-ywM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyK-aE-XKh">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="TmE-gl-TGp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1i-ig-9BY">
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="hma-88-8uu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter the title here:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQB-c9-eJb">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter the content here:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLC-Va-zd3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nyK-aE-XKh" firstAttribute="centerX" secondItem="Vq1-f8-tkQ" secondAttribute="centerX" type="default" id="1fH-iL-LEt"/>
+                            <constraint firstItem="Vq1-f8-tkQ" firstAttribute="top" secondItem="4bq-ZA-uLs" secondAttribute="top" type="default" id="6c3-fC-RN6"/>
+                            <constraint firstItem="Y1i-ig-9BY" firstAttribute="top" secondItem="zLC-Va-zd3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="I3E-3U-efa"/>
+                            <constraint firstItem="zLC-Va-zd3" firstAttribute="top" secondItem="4bq-ZA-uLs" secondAttribute="top" constant="127" id="L1H-jm-rHx"/>
+                            <constraint firstItem="zQB-c9-eJb" firstAttribute="top" secondItem="4bq-ZA-uLs" secondAttribute="top" constant="64" id="ObT-pK-dTs"/>
+                            <constraint firstItem="nyK-aE-XKh" firstAttribute="top" secondItem="zQB-c9-eJb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="V31-wc-obk"/>
+                            <constraint firstItem="Vq1-f8-tkQ" firstAttribute="leading" secondItem="4bq-ZA-uLs" secondAttribute="leading" type="default" id="Ymf-nw-SI1"/>
+                            <constraint firstItem="Y1i-ig-9BY" firstAttribute="trailing" secondItem="nyK-aE-XKh" secondAttribute="trailing" type="default" id="co1-R5-5Qp"/>
+                            <constraint firstItem="zQB-c9-eJb" firstAttribute="leading" secondItem="nyK-aE-XKh" secondAttribute="leading" type="default" id="fs2-Eu-eHz"/>
+                            <constraint firstItem="zLC-Va-zd3" firstAttribute="leading" secondItem="Y1i-ig-9BY" secondAttribute="leading" type="default" id="tj6-k2-yYr"/>
+                            <constraint firstItem="Vq1-f8-tkQ" firstAttribute="trailing" secondItem="4bq-ZA-uLs" secondAttribute="trailing" type="default" id="wj0-Fb-kzL"/>
+                            <constraint firstItem="zLC-Va-zd3" firstAttribute="leading" secondItem="nyK-aE-XKh" secondAttribute="leading" type="default" id="x1w-QR-OPH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentField" destination="Y1i-ig-9BY" id="R6Y-I8-Stb"/>
+                        <outlet property="titleField" destination="nyK-aE-XKh" id="ese-1S-uco"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mT2-2Y-IFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="df5-UW-IQC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="995" y="421"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OTLAddNoteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OTLAddNoteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelModalViewController:"/>
+                <relationship kind="action" name="doneWithModalViewController:"/>
+                <relationship kind="action" name="foo:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="contentField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="OTLDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OTLDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailContent" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailTitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="OTLMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OTLMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="foo:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

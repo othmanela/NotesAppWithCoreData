@@ -15,6 +15,15 @@
 @implementation OTLDetailViewController
 
 #pragma mark - Managing the detail item
+-(void)mapViewDidFinishLoadingMap:(MKMapView *)mapView{
+    NSNumber *lat = [self.detailItem valueForKey:@"lat"] ;
+    double dlat = [lat doubleValue];
+    NSNumber *lon = [self.detailItem valueForKey:@"lon"] ;
+    double dlon = [lon doubleValue];
+    CLLocationCoordinate2D coord= { dlat , dlon };
+    [self addPinToMapAtLocation: coord];
+    
+}
 
 - (void)setDetailItem:(id)newDetailItem
 {
@@ -32,6 +41,14 @@
 
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        self.detailTitle.text= [[self.detailItem valueForKey:@"title"] description];
+        self.detailContent.text= [[self.detailItem valueForKey:@"content"] description];
+        NSNumber *lat = [self.detailItem valueForKey:@"lat"] ;
+        double dlat = [lat doubleValue];
+        NSNumber *lon = [self.detailItem valueForKey:@"lon"] ;
+        double dlon = [lon doubleValue];
+        CLLocationCoordinate2D coord= { dlat , dlon };
+        [self addPinToMapAtLocation: coord];
     }
 }
 
@@ -48,4 +65,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Location
+- (void)addPinToMapAtLocation:(CLLocationCoordinate2D)location
+{
+    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+    pin.coordinate = location;
+    [self.mapView addAnnotation:pin];
+    [self.mapView setCenterCoordinate:pin.coordinate];
+    MKCoordinateSpan span;
+    span.latitudeDelta=0.03;
+    span.longitudeDelta=0.03;
+    MKCoordinateRegion region=[self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(location, 200,  200)];
+    region.center=pin.coordinate;
+    region.span= span;
+    [self.mapView setRegion:region animated:FALSE];
+    
+}
 @end

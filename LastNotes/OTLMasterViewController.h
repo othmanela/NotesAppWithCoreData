@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreLocation/CoreLocation.h>
 #import <CoreData/CoreData.h>
 
-@interface OTLMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface OTLMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end

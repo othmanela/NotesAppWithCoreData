@@ -21,6 +21,9 @@
 		2C0F0A091702680A00B25592 /* LastNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A071702680A00B25592 /* LastNotes.xcdatamodeld */; };
 		2C0F0A0C1702680A00B25592 /* OTLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A0B1702680A00B25592 /* OTLMasterViewController.m */; };
 		2C0F0A0F1702680A00B25592 /* OTLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A0E1702680A00B25592 /* OTLDetailViewController.m */; };
+		2C0F0A1917026CFB00B25592 /* OTLAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F0A1817026CFB00B25592 /* OTLAddNoteViewController.m */; };
+		2C0F0A1B1702714000B25592 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0F0A1A1702714000B25592 /* CoreLocation.framework */; };
+		2C0F0A1D1702714700B25592 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0F0A1C1702714700B25592 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,10 @@
 		2C0F0A0B1702680A00B25592 /* OTLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLMasterViewController.m; sourceTree = "<group>"; };
 		2C0F0A0D1702680A00B25592 /* OTLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTLDetailViewController.h; sourceTree = "<group>"; };
 		2C0F0A0E1702680A00B25592 /* OTLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLDetailViewController.m; sourceTree = "<group>"; };
+		2C0F0A1717026CFB00B25592 /* OTLAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OTLAddNoteViewController.h; path = ../OTLAddNoteViewController.h; sourceTree = "<group>"; };
+		2C0F0A1817026CFB00B25592 /* OTLAddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OTLAddNoteViewController.m; path = ../OTLAddNoteViewController.m; sourceTree = "<group>"; };
+		2C0F0A1A1702714000B25592 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2C0F0A1C1702714700B25592 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0F0A1D1702714700B25592 /* MapKit.framework in Frameworks */,
+				2C0F0A1B1702714000B25592 /* CoreLocation.framework in Frameworks */,
 				2C0F09EB1702680A00B25592 /* UIKit.framework in Frameworks */,
 				2C0F09ED1702680A00B25592 /* Foundation.framework in Frameworks */,
 				2C0F09EF1702680A00B25592 /* CoreGraphics.framework in Frameworks */,
@@ -81,6 +90,8 @@
 		2C0F09E91702680A00B25592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C0F0A1C1702714700B25592 /* MapKit.framework */,
+				2C0F0A1A1702714000B25592 /* CoreLocation.framework */,
 				2C0F09EA1702680A00B25592 /* UIKit.framework */,
 				2C0F09EC1702680A00B25592 /* Foundation.framework */,
 				2C0F09EE1702680A00B25592 /* CoreGraphics.framework */,
@@ -92,6 +103,8 @@
 		2C0F09F21702680A00B25592 /* LastNotes */ = {
 			isa = PBXGroup;
 			children = (
+				2C0F0A1717026CFB00B25592 /* OTLAddNoteViewController.h */,
+				2C0F0A1817026CFB00B25592 /* OTLAddNoteViewController.m */,
 				2C0F09FB1702680A00B25592 /* OTLAppDelegate.h */,
 				2C0F09FC1702680A00B25592 /* OTLAppDelegate.m */,
 				2C0F0A041702680A00B25592 /* MainStoryboard.storyboard */,
@@ -191,6 +204,7 @@
 				2C0F0A091702680A00B25592 /* LastNotes.xcdatamodeld in Sources */,
 				2C0F0A0C1702680A00B25592 /* OTLMasterViewController.m in Sources */,
 				2C0F0A0F1702680A00B25592 /* OTLDetailViewController.m in Sources */,
+				2C0F0A1917026CFB00B25592 /* OTLAddNoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
